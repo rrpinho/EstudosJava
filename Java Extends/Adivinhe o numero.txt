@@ -1,0 +1,27 @@
+Escreva um programa que gere um número aleatório inteiro entre 0 e 10 e através de testes
+condicionais o usuário tem que advinhar que número foi gerado.
+
+
+
+
+package adivinhe.o.numero;
+import java.io.*;
+import java.util.Random;
+import java.util.Scanner;
+public class AdivinheONumero {
+    public static void main(String[] args) {
+        Random gerador = new Random();
+        int aleatorio = gerador.nextInt(11); //Número de 0 a 10
+        int digitado;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Adivinhe o número entre 0 e 10");
+        digitado = entrada.nextInt();
+        if (digitado == aleatorio)
+            System.out.println("Você Acertou");
+        else 
+            System.out.println("Você Errou");
+        String n = (digitado == aleatorio) ? "Você Acertou" : "Você Errou";
+        System.out.println(n);
+        System.out.println("Você digitou: "+digitado+" e o numero certo era: "+aleatorio);
+    }
+}

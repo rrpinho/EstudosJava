@@ -1,0 +1,27 @@
+public //Está publica para todos
+private // Só pode ser alterada nela mesmo e não em outros lugares
+protected //Apenas os Herdados podem fazer alteração (extends)
+
+
+public class Banco{
+	public static void main (String [] args){
+	conta C1 = new conta;
+	//C1.saldo = 250.0;
+	C1.inicializador(250.0);
+	}
+}
+
+public class Conta{
+	private float saldo = 0;
+	public inicializador(float valor){
+		this.saldo = valor;
+	}
+
+
+	public void saca (float valor){
+		if (valor<saldo)
+			this.saldo = valor;
+		else
+			System.out.println("Saldo Insuficiente");
+	}
+}

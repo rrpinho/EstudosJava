@@ -1,0 +1,67 @@
+Lógica:
+    || --> ou, or
+    && --> and
+    != --> diferente
+
+Variáveis:
+    boolean --> 1 bit. true ou false
+    byte --> 8 bits. Vai até 127
+    short --> 16 bits. Vai até 65 mil
+    char --> 16 bits. Um único caractere.
+    int --> 32 bits. Vai até 2 bilhões
+    float --> Ponto flutuante de 32 bits
+    long --> 64 bits. Vai até 2^63
+    double --> Ponto flutuante de 64 bits
+    String --> texto
+
+Conversão de dados:
+    double salario = 1270.50;
+    int valor = (int) salario; --> Forçando que seja um valor Inteiro
+    
+    String -> Inteiro (1, 2, 3, ...)
+	    int i = Integer.valueOf(variavel);
+
+    String -> Long (1000800, 201002, ...)
+	    long l = Long.valueOf(variavel);
+
+    String -> Float (2.15, 3.14, ...)
+	    float f = Float.valueOf(variavel);
+
+    String -> Double (25.83421, ...)
+	    double d = Double.valueOf(variavel);
+
+Entrada de dados:
+    import java.util.Scanner;
+
+    char --> next();
+    double --> nextDouble();
+    int --> nextInt();
+    String --> nextLine();
+    long --> nextLong();
+
+Condicionais:
+    if (condição) {
+        bloco de execução;
+    } else {
+        bloco se der false;
+        }
+
+    switch (var){
+        case op1:
+            bloco;
+            break;
+        case op2:
+            bloco;
+            break;
+        default:
+            bloco;
+    }
+
+Laço:
+    while (condição) {
+        bloco
+    }
+
+    for (inicialização; finalização; incremento) {
+        bloco
+    }

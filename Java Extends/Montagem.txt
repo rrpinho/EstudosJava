@@ -1,0 +1,43 @@
+package montagem;
+import java.io.*;
+public class Montagem {
+    public static void main(String[] args) {
+        Lego teste = new Lego();
+        Lego peca1 = new Lego("Vermelho", 7, 5, 3);
+        Lego peca2 = new Lego("Azul", 7, 5, 3);
+        Lego peca3 = new Lego("Amarelo", 7, 5, 3);
+        Lego peca4 = new Lego("Verde", 7, 5, 3);
+        System.out.println(peca1.cor+","+peca1.largura+","+peca1.altura+","+peca1.comprimento);
+        System.out.println(" "+peca2.cor+peca2.largura+peca2.altura+peca2.comprimento);
+        System.out.println(" -> "+peca3.cor+","+peca3.largura+","+peca3.altura+","+peca3.comprimento);
+        System.out.println(peca4.cor);
+        System.out.println(peca4.largura);
+        System.out.println(peca4.altura);
+        System.out.println(peca4.comprimento);
+        System.out.println(teste);
+    }
+}
+
+
+
+
+
+
+
+package montagem;
+class Lego {
+    String cor;
+    int largura;
+    int altura;
+    int comprimento;
+    public Lego(){
+        System.out.println("Objeto criado");
+}
+    public Lego (String cor, int largura, int altura, int comprimento){
+        this.cor = cor;
+        this.largura = largura;
+        this.altura = altura;
+        this.comprimento = comprimento;
+        System.out.println("Obejo.1 criado.1");
+}
+}

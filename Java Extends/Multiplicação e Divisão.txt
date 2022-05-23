@@ -1,0 +1,18 @@
+Receba dois valores inteiros e realize a multiplicação e divisão.
+
+import java.io.*;
+public class Quest1 {
+    public static void main(String[] args) throws IOException{
+        int num1, num2;
+        String digitado;
+        BufferedReader obj = new BufferedReader (new InputStreamReader (System.in));
+        System.out.println("Informe um numero:");
+        digitado = obj.readLine();
+        num1 = Integer.valueOf(digitado);
+        System.out.println("Informe outro numero:");
+        digitado = obj.readLine();
+        num2 = Integer.valueOf(digitado);
+        System.out.println("A multiplicação foi: "+num1*num2);
+        System.out.println("A divisão foi: "+num1/num2);
+    }
+}

@@ -1,0 +1,22 @@
+Escreva um programa que receba um número e informe se ele é par ou ímpar.
+Use o operador matemático "%" (sugestão)
+
+
+package par.ou.impar;
+import java.io.*;
+import java.util.Scanner;
+public class ParOuImpar {
+    public static void main(String[] args) {
+        int valor;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite um valor inteiro");
+        valor = entrada.nextInt();
+        if (valor%2 == 0)
+            System.out.println("O valor "+valor+" é um número Par");
+        else 
+            System.out.println("O valor "+valor+" é um número Impar");
+        String n = (valor%2 == 0)? "O valor "+valor+" é um número Par" : "O valor "+valor+" é um número Impar";
+        System.out.println(n);
+    }
+    
+}

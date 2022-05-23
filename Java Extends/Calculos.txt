@@ -1,0 +1,58 @@
+package calculos;
+import java.io.*;
+public class Calculos {
+    public static void main(String[] args) throws IOException{
+        Calculo conta1 = new Calculo(2, 6);
+        Calculo conta2 = new Calculo(2, 4, 6);
+        Calculo conta3 = new Calculo("Rafael", "Pinho");        
+    }
+    
+}
+
+
+
+
+
+package calculos;
+import java.io.*;
+ class Calculo {
+     String digitado;
+     int num1;
+     int num2;
+     int num3;
+     String palavra1;
+     String palavra2;
+     BufferedReader obj = new BufferedReader(InputStreamReader (System.in));
+     public Calculo(int num1, int num2) throws IOException{
+         System.out.println("Digite o primeiro numero");
+         digitado = obj.readLine();
+         num1 = Integer.valueOf(digitado);
+         System.out.println("Digite o segundo numero");
+         digitado = obj.readLine();
+         num2 = Integer.valueOf(digitado);
+         System.out.println("A soma deles foi:"+num1+num2);
+     }
+     public Calculo(int num1, int num2, int num3) throws IOException{
+         System.out.println("Digite o primeiro numero");
+         digitado = obj.readLine();
+         num1 = Integer.valueOf(digitado);
+         System.out.println("Digite o segundo numero");
+         digitado = obj.readLine();
+         num2 = Integer.valueOf(digitado);
+         System.out.println("Digite o terceiro numero");
+         digitado = obj.readLine();
+         num3 = Integer.valueOf(digitado);
+         System.out.println("A multiplicacao foi:"+num1*num2*num3);
+     }
+     public Calculo(String palavra1, String palavra2) throws IOException{
+         System.out.println("Digite a primeira palavra");
+         palavra1 = obj.readLine();
+         System.out.println("Digite a segunda palavra");
+         palavra2 = obj.readLine();
+         System.out.println("Foi formado a seguinte palavra:"+palavra1+" "+palavra2);
+     }
+
+    private Reader InputStreamReader(InputStream in) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}

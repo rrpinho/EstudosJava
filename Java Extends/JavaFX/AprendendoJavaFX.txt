@@ -1,0 +1,21 @@
+import javafx.application.Application;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
+import javafx.scene.Scene;
+public class AprendendoFX extends Application{
+    public static void main (String[] args){
+        launch(); //Método que inicia a aplicação JavaFX / Dentro desse método que chama a funcao start
+    }
+    @Override
+    public void start(Stage palco) throws Exception{ //funcao onde o código será escrito
+        StackPane historia = new StackPane();
+        Label Mensagem = new Label();
+        Mensagem.setText("Estou Aprendendo JavaFX!!!");
+        historia.getChildren().add(Mensagem);
+        Scene cena = new Scene(historia, 250, 100); //Comando, Largura, Altura
+        palco.setTitle("Aprendendo JavaFX");
+        palco.setScene(cena);
+        palco.show();
+    }
+}

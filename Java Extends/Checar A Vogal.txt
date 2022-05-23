@@ -1,0 +1,33 @@
+Crie um programa que cheque qual foi a vogal digitada:
+
+
+package vogal;
+import java.io.*;
+import java.util.Scanner;
+public class Vogal {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite uma vogal");
+        char n = ler.nextLine().charAt(0);
+        switch(n){
+            case 'a': case 'A':
+                System.out.println("Você digitou: "+n);
+                break;
+            case 'e': case'B':
+                System.out.println("Você digitou: "+n);
+                break;
+            case 'i': case 'I':
+                System.out.println("Você digitou: "+n);
+                break;
+            case 'o': case 'O':
+                System.out.println("Você digitou: "+n);
+                break;
+            case 'u': case 'U':
+                System.out.println("Você digitou: "+n);
+                break;
+            default:
+                System.out.println("Você não digitou uma vogal!");
+        }
+    }
+    
+}

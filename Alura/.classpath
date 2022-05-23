@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Arrays/src"/>
+	<classpathentry kind="src" path="Date/src"/>
+	<classpathentry kind="src" path="Excecoes/src"/>
+	<classpathentry kind="src" path="grandeEstruturas/src"/>
+	<classpathentry kind="src" path="herdado/src"/>
+	<classpathentry kind="src" path="Maven/src/main/java"/>
+	<classpathentry kind="src" path="Maven/src/test/java"/>
+	<classpathentry kind="src" path="POO/src"/>
+	<classpathentry kind="src" path="springboot/.mvn/wrapper"/>
+	<classpathentry kind="src" path="springboot/src/main/java"/>
+	<classpathentry kind="src" path="springboot/src/test/java"/>
+	<classpathentry kind="src" path="springmvc/.mvn/wrapper"/>
+	<classpathentry kind="src" path="springmvc/src/main/java"/>
+	<classpathentry kind="src" path="springmvc/src/test/java"/>
+	<classpathentry kind="src" path="XML/src"/>
+	<classpathentry kind="output" path="Maven/target/classes"/>
+</classpath>

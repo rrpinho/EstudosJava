@@ -1,0 +1,5 @@
+CREATE DATABASE jpa;
+USE jpa;
+
+SHOW TABLES;
+SELECT * FROM conta;

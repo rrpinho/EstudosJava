@@ -1,0 +1,48 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.AudioClip;
+//Colocar a música na pasta do projeto (Documentos/NetBeansProject/"projeto"/src)
+public class PlayerMusicFX extends Application{
+    private String AUDIO_URL = getClass().getResource("The Poet.mp3").toString();
+    public static void main (String[] args){
+        launch(); //Método que inicia a aplicação JavaFX / Dentro desse método que chama a funcao start
+    }
+    @Override
+    public void start (Stage palco) throws Exception{ //Funcao onde o código será escrito
+        AudioClip musica = new AudioClip(AUDIO_URL);
+        StackPane historia = new StackPane();
+        Button Tocar = new Button();
+        Tocar.setText("Play");
+        Tocar.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event){
+                if (musica.isPlaying()){
+                    musica.stop();}
+                musica.play();
+            }
+        });
+        Button Pausar = new Button();
+        Pausar.setText("Pause");
+        Pausar.setOnAction(new EventHandler<ActionEvent>(){
+            @Override
+            public void handle(ActionEvent event){
+                musica.stop();
+            }
+        });
+        Tocar.setTranslateX(-25);
+        Tocar.setTranslateY(-10);
+        Pausar.setTranslateX(25);
+        //Pausar.setTranslateY(0);
+        historia.getChildren().add(Tocar);
+        historia.getChildren().add(Pausar);
+        Scene cena = new Scene(historia, 600, 100); //"Comando", Largura, Altura
+        palco.setTitle("Tocando Audio em JavaFX");
+        palco.setScene(cena);
+        palco.show();
+    }
+}

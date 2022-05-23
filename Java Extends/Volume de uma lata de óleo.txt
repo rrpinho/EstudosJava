@@ -1,0 +1,21 @@
+Calcular e apresentar o volume de uma lata de oleo, utilizando a formula: Volume = 3,14*Raio^2*Altura
+
+package q2;
+import java.io.*;
+import static java.lang.Math.pow;
+public class Q2 {
+public static void main(String[] args) throws IOException {
+    float volume, raio, altura;
+    String digitado;
+    BufferedReader obj = new BufferedReader (new InputStreamReader(System.in));
+    System.out.println("Informe o raio:");
+    digitado = obj.readLine();
+    raio = Float.valueOf(digitado);
+    System.out.println("Informe a altura:");
+    digitado = obj.readLine();
+    altura = Float.valueOf(digitado);
+    System.out.println("O volume eh:"+3.14*raio*raio*altura);
+    System.out.println(" O VOLUME EH: "+Math.PI*pow(raio, 2)*altura);
+    System.out.println(" O Volume eh:"+3.14*pow(raio, 2)*altura);
+    } 
+}

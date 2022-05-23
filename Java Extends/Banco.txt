@@ -1,0 +1,43 @@
+package Banco;
+import java.io.*;
+public class Banco {
+    public static void main(String[] args) throws IOException{
+        ContaBancaria conta1 = new ContaBancaria("Victor", 4587, 80);
+        System.out.println(conta1.nome+","+conta1.conta);
+        conta1.deposito(100);
+        conta1.saque(10000);
+        conta1.saque(20);
+        conta1.consulta();    
+    }
+    
+}
+
+
+
+
+package Banco;
+public class ContaBancaria {
+    String nome;
+    int conta;
+    float valorContaCorrente;
+    public ContaBancaria(String n, int conta, float valorContaCorrente){
+        this.nome = n;
+        this.conta = conta;
+        this.valorContaCorrente = valorContaCorrente;
+    }
+    public void consulta () {
+        System.out.println("Titular: "+nome+"; Numero da Conta: "+conta+"; Saldo: "+valorContaCorrente);
+    }
+    public void deposito(float valorDepositado){
+        valorContaCorrente = valorContaCorrente + valorDepositado;
+        System.out.println("Deposito realizado com sucesso");
+    }
+    public void saque(float valorParaSaque){
+        if (valorParaSaque>valorContaCorrente){
+            System.out.println("Saque insuficiente");
+        }else{
+            valorContaCorrente = valorContaCorrente - valorParaSaque;
+            System.out.println("Saque efetuado com sucesso!");
+        }
+    }
+}

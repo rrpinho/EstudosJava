@@ -1,0 +1,30 @@
+package operacao;
+public class Operacao {
+    public static void main(String[] args) {
+//        Calculos obj = new Calculos();
+//        System.out.println(obj.calculo(2,6));
+//        System.out.println(obj.calculo("V", "R"));
+//        System.out.println(obj.calculo(9,6,3));
+        System.out.println(Calculos.calculo(2,6));
+        System.out.println(Calculos.calculo("V", "R"));
+        System.out.println(Calculos.calculo(9,6,3));
+    }
+    
+}
+
+
+
+
+
+package operacao;
+ class Calculos {
+    public static int calculo (int n1, int n2){
+        return n1+n2;
+    }
+    public static int calculo (int n1, int n2, int n3){
+        return n1*n2*n3;
+    }
+    public static String calculo(String a1, String a2){
+        return a1+a2;
+    }
+}

@@ -1,0 +1,28 @@
+Crie um programa que receba uma nota (utilizando o scanner) e checa se passou direto ou não.
+As condições são as seguintes:
+	- Nota 7 ou mais - APROVADO
+	- Entre 5 e abaixo de 7 - RECUPERAÇÃO
+	- Abaixo de 5 - REPROVADO
+
+
+package media;
+import java.io.*;
+import java.util.Scanner;
+public class Media {
+    public static void main(String[] args) {
+        float nota;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite sua nota:");
+        nota = entrada.nextFloat();
+        if (nota>= 7){
+            System.out.println("Aprovado");        
+        } else {
+            if (nota<7 && nota>= 5){
+                System.out.println("Recuperacao");
+        } else {
+                System.out.println("Reprovado");}
+        }
+        String n = (nota >= 7) ? "Aprovado" : (nota<7 && nota>=5) ? "Recuperacao" : "Reprovado";
+        System.out.println(n);
+    }
+}

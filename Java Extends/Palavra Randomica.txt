@@ -1,0 +1,35 @@
+Crie um programa para gerar frases aleatórias. Para isso crie 3 vetores de String e cada um deles com 5 palavras.
+Depois crie um método que receba estes 3 vetores e sorteie randômicamente 1 posição de cada um destes vetores e gere uma frase.
+
+
+
+
+package palavrarandomica;
+public class PalavraRandomica {
+    public static void main(String[] args) {
+        String[] palavra1 = {"Eu", "Tu", "Ele", "Você", "Eles"};
+        String[] palavra2 = {"corre",  "anda", "lê", "dorme", "trabalha"};
+        String[] palavra3 = {".", "S2", "*__*", "=D", "=("};
+        Operador o = new Operador();
+        o.gerador(palavra1, palavra2, palavra3);
+    }
+}
+
+
+
+
+
+
+
+package palavrarandomica;
+public class Operador {
+    public void gerador(String[] p1, String[] p2, String[] p3){
+        int tamPalavra1 = p1.length;
+        int tamPalavra2 = p2.length;
+        int tamPalavra3 = p3.length;
+        int posicaoPalavra1 = (int) (Math.random() * tamPalavra1);
+        int posicaoPalavra2 = (int) (Math.random() * tamPalavra1);
+        int posicaoPalavra3 = (int) (Math.random() * tamPalavra1);
+        System.out.println(p1[posicaoPalavra1]+" "+p2[posicaoPalavra2]+" "+p3[posicaoPalavra3]);
+    }
+}

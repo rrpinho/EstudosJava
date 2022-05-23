@@ -1,0 +1,55 @@
+Monte um programa orientado a objetos que seja uma calculadora e realize as quatro operações matematicas.
+
+package q3;
+import java.io.*;
+public class Q3 {
+    public static void main(String[] args) throws IOException {
+        float num1, num2, resultado;
+        String digitado;
+        BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Informe um numero:");
+        digitado = obj.readLine();
+        num1 = Float.valueOf(digitado);
+        System.out.println("Informe outro numero:");
+        digitado = obj.readLine();
+        num2 = Float.valueOf(digitado);
+        Operacoes calculo = new Operacoes();
+        resultado = calculo.soma(num1, num2);
+        System.out.println(resultado);
+        resultado = calculo.subtrai(num1, num2);
+        System.out.println(resultado);
+        resultado = calculo.multiplica(num1, num2);
+        System.out.println(resultado);
+        resultado = calculo.divide(num1, num2);
+        System.out.println(resultado);
+   }
+}
+
+
+
+
+
+
+package q3;
+import java.io.*;
+public class Operacoes {
+    public static void main(String[] args) throws IOException {
+        public float soma(float num1, float num2) {
+            
+        }
+        public float subtrai(float num1, float num2) {
+            
+        }
+        public float multiplica (float num1, float num2) {
+        float resultado = num1*num2;
+        return resultado;
+    }
+        public float divide (float num1, float num2) {
+        float resultado=0;
+        if(num2 != 0) {
+            resultado = num1/num2;
+        }
+        return resultado;
+    }
+    }
+}

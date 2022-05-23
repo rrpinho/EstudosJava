@@ -1,0 +1,11 @@
+String -> Inteiro (1, 2, 3, ...)
+	int i = Integer.valueOf(variavel);
+
+String -> Long (1000800, 201002, ...)
+	long l = Long.valueOf(variavel);
+
+String -> Float (2.15, 3.14, ...)
+	float f = Float.valueOf(variavel);
+
+String -> Double (25.83421, ...)
+	double d = Double.valueOf(variavel);

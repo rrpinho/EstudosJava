@@ -1,0 +1,58 @@
+Crie um programa orientado a objetos, no qual o usuário digite uma palavra e seja mostrado a quantidade
+de vogais, depois mostre a palavra escrita com o número "1" no local das vogais.
+Dicas: charAT(numeroPosição)
+
+
+
+
+
+package quantas.vogais;
+import java.util.Scanner;
+public class QuantasVogais {
+    public static void main(String[] args) {
+        String palavra;
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Informe uma palavra");
+        palavra = leitura.nextLine();
+        MetodosVogais m = new MetodosVogais();
+        m.quantidadeVogais(palavra);
+        m.modificaVogal(palavra);
+    }
+}
+
+
+
+
+
+
+package quantas.vogais;
+public class MetodosVogais {
+    public void quantidadeVogais(String palavra){
+        int quant=0;
+        for(int i=0; i<palavra.length(); i++){
+            if(palavra.charAt(i) == 'a' || palavra.charAt(i) == 'A' ||
+                    palavra.charAt(i) == 'e' || palavra.charAt(i) == 'E'
+                    || palavra.charAt(i) == 'i' || palavra.charAt(i) == 'I'
+                    || palavra.charAt(i) == 'o' || palavra.charAt(i) == 'O'
+                    || palavra.charAt(i) == 'u' || palavra.charAt(i) == 'U'){
+                quant++;
+            }
+        }
+        System.out.println("A quantidade de voigais foi: "+quant);
+    }
+    public void modificaVogal(String palavra){
+        String mod = "";
+        char vogal;
+        for(int i=0; i<palavra.length(); i++){
+            if(palavra.charAt(i) == 'a' || palavra.charAt(i) == 'A' ||
+                    palavra.charAt(i) == 'e' || palavra.charAt(i) == 'E'
+                    || palavra.charAt(i) == 'i' || palavra.charAt(i) == 'I'
+                    || palavra.charAt(i) == 'o' || palavra.charAt(i) == 'O'
+                    || palavra.charAt(i) == 'u' || palavra.charAt(i) == 'U'){
+                vogal = palavra.charAt(i);
+                palavra = palavra.replace(vogal, '1');
+            }
+        }
+        System.out.println("A palavra com vogais substituidas: "+palavra);
+    }
+}

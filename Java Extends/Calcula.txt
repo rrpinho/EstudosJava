@@ -1,0 +1,19 @@
+package calcula;
+public class Calcula {
+    public static int resultado(int num1, int num2){
+        return (num1 + num2);
+    } 
+}
+
+
+
+
+
+
+package calcula;
+import java.io.*;
+public class Resultado {
+    public static void main(String[] args) {
+        System.out.println(Calcula.resultado(10,50));
+    }
+}
