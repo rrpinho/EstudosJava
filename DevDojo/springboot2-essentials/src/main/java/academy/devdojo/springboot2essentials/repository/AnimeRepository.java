@@ -4,6 +4,6 @@ import java.util.List;
 
 import academy.devdojo.springboot2essentials.domain.Anime;
 
-public interface AnimeRepository {
+public interface AnimeRepository extends JpaRepository<Anime, Long>{
     List<Anime> listAll();
 }
